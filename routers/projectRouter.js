@@ -69,10 +69,11 @@ router.get('/:id/actions', (req, res) => {
 
 //move to actions
 //WHY IS THIS RETURNING NULL ON SUCCESS???
-router.get('/action', (req, res) => {
+router.get('/actions', (req, res) => {
   Actions.get()
     .then(actions => {
-      console.log(actions)
+      //for some reason, this isn't being triggered, though it works just fine in the next router.get below
+      console.log("Test:", actions)
       res.status(200).json(actions);
     })
     .catch(error => {
