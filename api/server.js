@@ -10,8 +10,8 @@ server.get('/', (req, res) => {
 });
 
 // //endpoints
+// server.use("/api/projects/:id/actions", actionRouter);
 server.use("/api/projects", projectRouter);
-// server.use("/api/actions", actionRouter);
 
 
 module.exports = server;
